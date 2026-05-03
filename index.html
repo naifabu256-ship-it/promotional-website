@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marawi City — The Heart of Lanao</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Marawi City</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#attractions">Attractions</a></li>
+          <li><a href="#culture">Culture</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Welcome to Marawi City</h1>
+        <p class="lead">Discover the rich history, vibrant culture, and breathtaking lakeside scenery of the City of the Majestic Lakes.</p>
+        <p><a class="cta" href="#attractions">Explore Attractions</a></p>
+      </div>
+    </section>
+
+    <section id="history" class="section">
+      <div class="container">
+        <h2>History</h2>
+        <p>Marawi, located on the shores of Lake Lanao in Mindanao, is the center of the Maranao people and a historical hub of art, literature, and Sultanate traditions.</p>
+      </div>
+    </section>
+
+    <section id="attractions" class="section">
+      <div class="container">
+        <h2>Attractions</h2>
+        <p>Explore these notable places around Marawi City. Click any card for more details.</p>
+        <div id="spots-grid" class="grid" aria-live="polite">
+          <!-- Cards will be rendered here by JavaScript using data/spots.json -->
+        </div>
+      </div>
+    </section>
+
+    <section id="culture" class="section">
+      <div class="container">
+        <h2>Culture</h2>
+        <p>Experience Marawi's music, dance, poetry (known as "bayok"), and festivals that celebrate Maranao identity.</p>
+      </div>
+    </section>
+
+    <section id="events" class="section">
+      <div class="container">
+        <h2>Events</h2>
+        <p>Local festivals, cultural nights, and community markets bring visitors closer to Marawi's living traditions.</p>
+      </div>
+    </section>
+
+    <section id="travel" class="section">
+      <div class="container">
+        <h2>Travel & Stay</h2>
+        <p>Marawi is accessible via Iligan and Marawi routes. Enjoy guesthouses, local homestays, and hospitality that makes you feel at home.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact & Visit</h2>
+        <p>Plan your trip. Reach out for guided tours and cultural experiences.</p>
+        <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Marawi City Tourism</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/render-spots.js"></script>
+</body>
+</html>

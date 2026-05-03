@@ -1,0 +1,40 @@
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#0a58ca;
+  --muted:#6c757d;
+  --bg:#f8fafc;
+  --max-width:1100px;
+}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#222;background:var(--bg)}
+.container{width:90%;max-width:var(--max-width);margin:0 auto}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-weight:700;font-size:1.25rem;color:var(--accent);text-decoration:none}
+.nav-toggle{background:none;border:0;display:none}
+.hamburger{width:28px;height:2px;background:#222;display:block;position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;width:28px;height:2px;background:#222}
+.hamburger::before{top:-8px}
+.hamburger::after{top:8px}
+.primary-nav .nav-list{display:flex;gap:1rem;list-style:none}
+.primary-nav a{text-decoration:none;color:inherit;padding:.4rem .6rem;border-radius:4px}
+.primary-nav a:hover{background:rgba(0,0,0,0.04)}
+.hero{background:linear-gradient(180deg,rgba(10,88,202,0.08),transparent);padding:3.5rem 0;text-align:center}
+.hero h1{font-size:2rem;margin-bottom:.5rem}
+.lead{color:var(--muted);margin-bottom:1rem}
+.cta{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.section{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:#fff;border-radius:8px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.contact-form{display:grid;gap:.5rem;max-width:480px}
+.contact-form input,.contact-form textarea{padding:.5rem;border:1px solid #ddd;border-radius:6px}
+.contact-form button{background:var(--accent);color:#fff;border:0;padding:.6rem 1rem;border-radius:6px}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive nav */
+@media (max-width:800px){
+  .nav-toggle{display:block}
+  .primary-nav{position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid #eee;display:none}
+  .primary-nav[aria-hidden="false"]{display:block}
+  .primary-nav .nav-list{flex-direction:column;padding:1rem}
+}
